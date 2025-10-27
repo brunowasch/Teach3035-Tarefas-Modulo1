@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(26, 25, 25);
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 100%;
+    height: 15vh;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+#container-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#container-numbers {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#operators {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    align-self: stretch;
+}
+
+.key{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    border: 1px solid #4a4a4a;
+    border-radius: 6px;
+    background: #f4f4f4;
+    background-color: #333;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.key:hover {
+    background-color: #4a4a4a;
+}
+
+#equal {
+    background-color: lightblue;
+    color: black;
+}
+
+#equal:hover {
+    background-color: rgba(173, 216, 230, 0.918);
+}
+
