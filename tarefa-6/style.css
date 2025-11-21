@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: #212529;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1, p {
+    margin-left: 2rem;
+}
+
+header > img {
+    width: 3rem;
+    margin: 0 1rem 0 1rem;
+}
+
+span {
+    font-size: 20px;
+}
+
+.txt1, .txt3 {
+    color: #1C7F54;
+}
+
+.txt2 {
+    color: #FFFFFF;
+}
+
+.container {
+    flex: 1;
+}
+
+form {
+    margin-top: 2rem;
+    display: grid;
+}
+
+input, select {
+    margin: 0.5rem 0 0 2rem;
+    padding: 0.7rem 1rem;
+    width: 50vw;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    transition: border-color .3s ease;
+}
+
+input:focus {
+    border-bottom-color: #1C7F54;
+    outline: none;
+}
+
+.btn-add {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1C7F54;
+    color: white;
+    cursor: pointer;
+    margin: 1rem 0 0 2rem;
+}
+
+.btn-add:hover {
+    background-color: #1b704b;
+}
+
+label {
+    margin: 2rem 0 0 2rem;
+}
+
+.task-list {
+    display: grid;
+}
+
+#tasks-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 1rem;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid #e1e4e8;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem 2rem 2rem;
+    max-width: 30%;
+    gap: 0.35rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.card:hover {
+    background-color: #f1f3f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.card h2 {
+    font-size: 1rem;
+    margin: 0;
+    color: #212529;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.card.completed {
+    background-color: #e9f7ef;
+    border-color: #b6e5c8;
+}
+
+.card.completed h2 {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.status-select {
+    display: block;
+    width: 160px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin: 0.5rem auto;
+    outline: none;
+    transition: 0.2s ease;
+}
+.status-select:focus {
+    border-color: #1C7F54;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e63939;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #212529;
+    color: #FFFFFF; 
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.img-container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .img-container img {
+    width: 2.5rem;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    h1, p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    form {
+        margin-top: 1rem;
+    }
+
+    input, select {
+        width: calc(100% - 3rem);
+        margin: 0.5rem 1.5rem 0 1.5rem;
+    }
+
+    #tasks-cards {
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header > img {
+        width: 2.5rem;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    input, select {
+        width: calc(100% - 2.5rem);
+        margin: 0.4rem 1.25rem 0 1.25rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .card {
+        padding: 0.8rem 0.9rem;
+        border-radius: 10px;
+    }
+
+    .card h2 {
+        font-size: 0.95rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .status-select {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .delete-btn {
+        align-self: center;
+        width: 100%;
+        max-width: 220px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .img-container {
+        gap: 10px;
+    }
+
+    footer .img-container img {
+        width: 2rem;
+    }
+}

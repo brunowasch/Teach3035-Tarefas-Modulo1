@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextToDo - Gerenciador de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.png" alt="Logo NextToDO">   
+        <span class="txt1">Next</span><span class="txt2">To</span><span class="txt3">Do</span>
+    </header>
+    <div class="container">
+        <h1>NextToDo - Gerenciador de tarefas</h1>
+        <p>Adicione suas tarefas:</p>
+        <form action="#">
+            <input type="text" name="task" id="task" placeholder="Digite sua tarefa..." />
+            <input type="date" name="date" id="date">
+            <select name="status" id="status">
+                <option value="Não iniciada">Não iniciada</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Concluída">Concluída</option>
+            </select>
+        </form>
+        <div class="btn-container">
+            <button onclick="addTask()" class="btn-add">Adicionar</button>
+        </div>
+        <div class="task-container">
+            <div class="task-list">
+                <label for="list-status">Listar tarefas:</label>
+                <select name="list-status" id="list-status">
+                    <option value="all">Todas</option>
+                    <option value="Não iniciada">Não iniciada</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluída">Concluída</option>
+                </select>
+            </div>
+            <div id="tasks-cards"></div>
+        </div>
+    </div>
+    <footer>
+        <p>NextToDo &copy; Todos os direitos reservados.</p>
+        <div class="img-container">
+            <a href="https://github.com/brunowasch" target="_blank"><img src="./assets/gh-logo.png" alt="Github Logo"></a>
+            <a href="https://www.linkedin.com/in/bruno-waschburger-silva-a401b3360" target="_blank"><img src="./assets/linkedin-logo.png" alt="LinkedIn Logo"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
